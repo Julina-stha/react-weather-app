@@ -10,16 +10,22 @@ export default function Weather() {
             <input type="search" placeholder="Enter a City name" className="form-control" />
           </div>
           <div className="col-3">
-            <input type= "submit" className="btn btn-primary" value="search" />
+            <input type= "submit" className="btn btn-primary" value="Search" />
           </div>
         </div>      
       </form>
-      <h1>Kathmandu</h1>
-      <ul>
-        <li>Temperature</li>
-        <li>Date</li>
-        <li>Local Time and Day</li>
+      <h1>Kathmandu, NP</h1>
+      <h2>30°C</h2>
+      <ul className="small-text">
+        <li>Clear Sky | Friday</li>
+
       </ul>
+      <ul className="more-weather-info">
+        <li className="humidity">Humidity: 79%</li>
+        <li className="date-time">10/09/2021 | 12:32</li>
+        <li>Wind: 6.26km/h</li>
+      </ul>
+
     </div>
   )
 }
