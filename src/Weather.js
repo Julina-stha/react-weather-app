@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormattedDayandTime from "./FormattedDayandTime";
+import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 
@@ -36,23 +36,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <h1>{weatherData.city}, {weatherData.country}</h1>
-        <h2>{Math.round(weatherData.temperature)}°C</h2>
-        <ul className="small-text">
-          <li className ="text-capitalize">{weatherData.description} | 10/09/2021 </li>
-        </ul>
-        <ul className="more-weather-info">
-          <li className="humidity">Humidity: {Math.round(weatherData.humidity)}%</li>
-          <li className="day-time"> <FormattedDayandTime dayandtime ={weatherData.dayandtime} /></li>
-          <li>Wind: {weatherData.wind} km/h</li>
-        </ul>
-        <div className="switch">
-          <div className="btn_group">
-            <input type="submit" className="Hourly" value="Hourly" />
-            <div className="btn_bg"></div>
-            <input type="submit" className="Daily" value="Daily" />
-          </div>
-        </div>
+        <WeatherData data = {weatherData} />
       </div>
     );
   } else {
