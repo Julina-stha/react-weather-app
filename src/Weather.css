@@ -44,6 +44,12 @@ form {
   background-color: #875df1e3;
 }
 
+.weather-icon canvas {
+  margin-top: 2%;
+  width: 70px;
+  height: 70px;
+}
+
 ul {
   list-style-type: none;
   padding: 0%;
@@ -52,7 +58,6 @@ ul {
 
 .small-text {
   font-size: 13px;
-  margin-top: 21%;
   line-height: 25px;
 }
 

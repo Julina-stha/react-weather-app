@@ -6,7 +6,7 @@ export default function FormattedDayandTime(props) {
   let day = days[props.dayandtime.getDay()];
   let hours = props.dayandtime.getHours();
   let minutes = props.dayandtime.getMinutes();
-  
+   
   if (hours < 10) {
     hours = `0${hours}`;
   }
