@@ -16,9 +16,9 @@
   text-align: center;
   padding: 15px 20px;
   transition: 0.8s;
-  color: rgb(58, 34, 80);
+  color: rgb(255, 250, 250);
   box-shadow: 0 0 20px #a3a1aa;
-  border-radius: 34px;
+  border-radius: 12px;
 }
 
 form {
@@ -28,18 +28,33 @@ form {
   border: 20px;
 }
 .form-control {
-  border-radius: 34px;
+  border-color: rgba(245, 245, 245);
   padding: 3px 10px 3px 10px;
+  background-color: rgba(245, 245, 245);
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 .btn-primary {
   background-color: #875df1c9;
   border: 1px solid #885df1;
-  transition: background 200ms ease, border-color 200ms ease;
-  border-radius: 34px;
   margin-left: -15px;
   padding: 3px 10px 3px 10px;
 }
 
+.fa,
+.fas {
+  font-size: 25px;
+  margin-top: 10%;
+  color: rgb(245, 245, 245);
+}
+
+.btn {
+  padding: 0%;
+}
+
+.col-2,
+.btn btn-link {
+  padding-left: 25px;
+}
 .btn-primary:hover {
   background-color: #875df1e3;
 }
@@ -57,7 +72,7 @@ ul {
 }
 
 .small-text {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 25px;
 }
 
@@ -67,8 +82,9 @@ element.style {
 ul.more-weather-info,
 ul.more-weather-info li {
   display: inline;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 15px;
+  color: #4a3481c7;
+  font-weight: 500;
 }
 
 .humidity {
