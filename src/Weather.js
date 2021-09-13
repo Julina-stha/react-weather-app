@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDayandTime from "./FormattedDayandTime";
 import axios from "axios";
 import "./Weather.css";
 
@@ -16,6 +17,7 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       wind: 12,
       humidity: response.data.main.humidity,
+      dayandtime: new Date(response.data.dt * 1000),
       
     })
   }
@@ -41,7 +43,7 @@ export default function Weather(props) {
         </ul>
         <ul className="more-weather-info">
           <li className="humidity">Humidity: {Math.round(weatherData.humidity)}%</li>
-          <li className="date-time">Friday | 12:32</li>
+          <li className="day-time"> <FormattedDayandTime dayandtime ={weatherData.dayandtime} /></li>
           <li>Wind: {weatherData.wind} km/h</li>
         </ul>
         <div className="switch">
