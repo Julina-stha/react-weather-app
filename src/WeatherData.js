@@ -5,10 +5,23 @@ import "./Weather.css";
 
 
 export default function WeatherData(props) {
+
   return (
     <div className="weatherData">
       <h1>{props.data.city}, {props.data.country}</h1>
       <h2>{Math.round(props.data.temperature)}°C</h2>
+      <ul>
+        <li className="sunrise">
+          <img src="https://img.icons8.com/office/80/000000/sunrise--v1.png" alt="sunset" width="45" height="45" />
+          <hr/>
+          Sunrise: 05:20
+        </li>
+        <li className="sunset">
+          <img src="https://img.icons8.com/office/80/000000/sunset--v1.png" alt="sunset" width="45" />
+          <hr/>
+          Sunset: 07:20
+        </li>
+      </ul>
       <WeatherIcon code = {props.data.icon}/>
       <ul className="small-text">
         <li className ="text-capitalize">{props.data.description} | 10/09/2021 </li>
@@ -19,13 +32,8 @@ export default function WeatherData(props) {
         <li>Wind: {props.data.wind} km/h</li>
       </ul>
       <div className="switch">
-        <div className="btn_group">
-          <button input="submit" className="daily">
-            <span>Daily</span>
-            <div className="btn_bg"></div>
-          </button>
-          <button input="submit" className="hourly">Hourly</button>
-        </div>
+        <input type="checkbox" ></input>
+
       </div>
     </div>
   )

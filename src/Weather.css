@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: 550px;
   background-position-x: 40%;
-  background-position-y: 66%;
+  background-position-y: 70%;
   text-align: center;
   padding: 15px 20px;
   transition: 0.8s;
@@ -34,7 +34,7 @@ form {
   box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 .btn-primary {
-  background-color: #875df1c9;
+  background-color: rgb(233, 202, 78);
   border: 1px solid #885df1;
   margin-left: -15px;
   padding: 3px 10px 3px 10px;
@@ -60,9 +60,30 @@ form {
 }
 
 .weather-icon canvas {
-  margin-top: 2%;
-  width: 70px;
-  height: 70px;
+  margin-top: 3%;
+}
+
+hr {
+  line-height: 0.5%;
+  margin: 0.5rem 0;
+}
+
+.sunrise {
+  position: relative;
+  font-weight: 500;
+  left: 10px;
+  float: left;
+  font-size: 14px;
+  line-height: 0%;
+}
+
+.sunset {
+  font-weight: 500;
+  position: relative;
+  right: 15px;
+  float: right;
+  font-size: 14px;
+  line-height: 0%;
 }
 
 ul {
@@ -72,8 +93,9 @@ ul {
 }
 
 .small-text {
+  margin-bottom: 2%;
   font-size: 14px;
-  line-height: 25px;
+  line-height: 0px;
 }
 
 element.style {
@@ -99,7 +121,7 @@ h1 {
   font-size: 38px;
   font-weight: 500;
   top: 80px;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 h2 {
@@ -109,72 +131,63 @@ h2 {
 }
 
 .switch {
-  font-size: 15px;
-  width: 100%;
-  height: 100%;
-}
-button {
-  border: none;
-  background-color: transparent;
-  font-size: 13px;
-  line-height: 0%;
+  position: fixed;
+  top: 65%;
+  left: 46%;
 }
 
-.btn_group {
-  width: 120px;
-  height: 30px;
-  padding: 5px 10px;
+input[type="checkbox"] {
   position: relative;
-  z-index: 1;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  background-color: rgba(255, 255, 255, 0.562);
+  width: 110px;
+  height: 33px;
+  -webkit-appearance: none;
+  background: rgba(245, 245, 245, 0.582);
+  outline: none;
   border-radius: 5px;
 }
 
-.hourly {
-  float: left;
-  line-height: 17px;
-  margin-left: -10px;
-  color: white;
-  text-decoration: none;
-  transition: 1s;
+input[type="checkbox"]:hover {
+  cursor: pointer;
 }
 
-.daily {
-  float: right;
-  text-decoration: none;
-  line-height: 17px;
-  color: #543b94;
-}
-
-.btn_bg {
-  background-color: #6ee5dff8;
-  height: 24px;
-  width: 50px;
+input[type="checkbox"]:before {
+  content: "Hourly";
+  font-weight: 500;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 14px;
+  padding: 0px 5px 0px 5px;
   position: absolute;
-  top: 3px;
-  margin-left: -73px;
-  z-index: -1;
-  transition: 1s;
+  top: 12%;
+  left: 3%;
+  width: 55px;
+  height: 25px;
+  background: #45a39e9d;
   border-radius: 5px;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
 }
 
-span:active + .btn_bg {
-  width: 42px;
-  margin-left: 0px;
+input[type="checkbox"]:after {
+  content: "Daily";
+  font-weight: 500;
+  color: #4a3481d5;
+  line-height: 30px;
+  padding-left: 65px;
+  font-size: 14px;
+  transition: all 0.5s ease-out;
 }
 
-.daily > span:focus {
-  color: white;
+input:checked[type="checkbox"]:before {
+  left: 50px;
+  content: "Daily";
+  text-align: center;
+  transition: all 0.5s ease-out;
 }
 
-.daily:active ~ .hourly {
-  color: #543b94;
-}
-
-span {
-  padding: 10px 0;
-  transition: 1s;
+input:checked[type="checkbox"]:after {
+  content: "Hourly";
+  font-size: 14px;
+  padding: 10px 30px 5px 5px;
+  transition: all 0.5s ease-out;
 }
