@@ -30,7 +30,7 @@ form {
 .form-control {
   border-color: rgba(245, 245, 245);
   padding: 3px 10px 3px 10px;
-  background-color: rgba(245, 245, 245);
+  background-color: #edecf0a4;
   box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 .btn-primary {
@@ -109,37 +109,73 @@ h2 {
 }
 
 .switch {
-  top: 130px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 15px;
+  width: 100%;
+  height: 100%;
 }
-
-.Daily {
-  position: relative;
-  top: 130px;
-  color: rgb(58, 34, 80);
-
+button {
+  border: none;
   background-color: transparent;
-  border-color: transparent;
-  left: 45px;
-}
-.Hourly {
-  padding: 0px 10px 0px 8px;
-  position: absolute;
-  top: 446px;
-  left: 630px;
-  color: #885df1;
-  border-color: transparent;
-  background-color: rgba(255, 255, 255, 0.603);
-  border: transparent;
-  border-radius: 34px;
+  font-size: 13px;
+  line-height: 0%;
 }
 
-.Daily:hover {
-  cursor: pointer;
-  color: #885df1;
-  background-color: rgba(255, 255, 255, 0.603);
-  border-radius: 34px;
-  padding: 0px 10px 0px 8px;
+.btn_group {
+  width: 120px;
+  height: 30px;
+  padding: 5px 10px;
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  background-color: rgba(255, 255, 255, 0.562);
+  border-radius: 5px;
+}
+
+.hourly {
+  float: left;
+  line-height: 17px;
+  margin-left: -10px;
+  color: white;
+  text-decoration: none;
+  transition: 1s;
+}
+
+.daily {
+  float: right;
+  text-decoration: none;
+  line-height: 17px;
+  color: #543b94;
+}
+
+.btn_bg {
+  background-color: #6ee5dff8;
+  height: 24px;
+  width: 50px;
+  position: absolute;
+  top: 3px;
+  margin-left: -73px;
+
+  z-index: -1;
+  transition: 1s;
+  border-radius: 5px;
+}
+
+span:active + .btn_bg {
+  width: 60px;
+  margin-left: 1px;
+}
+
+.daily > span:active {
+  color: white;
+}
+
+.daily:active ~ .hourly {
+  color: #543b94;
+}
+
+span {
+  padding: 10px 0;
+  transition: 1s;
 }

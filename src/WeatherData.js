@@ -20,9 +20,11 @@ export default function WeatherData(props) {
       </ul>
       <div className="switch">
         <div className="btn_group">
-          <input type="submit" className="Hourly" value="Hourly" />
-          <div className="btn_bg"></div>
-          <input type="submit" className="Daily" value="Daily" />
+          <button input="submit" className="daily">
+            <span>Daily</span>
+            <div className="btn_bg"></div>
+          </button>
+          <button input="submit" className="hourly">Hourly</button>
         </div>
       </div>
     </div>

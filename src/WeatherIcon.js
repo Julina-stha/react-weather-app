@@ -144,6 +144,7 @@ export default function WeatherIcon(props) {
     <div className="weather-icon">
       <ReactSkycon
         icon={iconMapping[props.icon]}
+
       />
     </div>
 
