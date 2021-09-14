@@ -156,18 +156,17 @@ button {
   position: absolute;
   top: 3px;
   margin-left: -73px;
-
   z-index: -1;
   transition: 1s;
   border-radius: 5px;
 }
 
 span:active + .btn_bg {
-  width: 60px;
-  margin-left: 1px;
+  width: 42px;
+  margin-left: 0px;
 }
 
-.daily > span:active {
+.daily > span:focus {
   color: white;
 }
 
