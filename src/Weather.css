@@ -34,7 +34,6 @@ form {
   box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 .btn-primary {
-  background-color: rgb(233, 202, 78);
   border: 1px solid #885df1;
   margin-left: -15px;
   padding: 3px 10px 3px 10px;
@@ -60,7 +59,8 @@ form {
 }
 
 .weather-icon canvas {
-  margin-top: 3%;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 hr {
@@ -106,15 +106,14 @@ ul.more-weather-info li {
   display: inline;
   font-size: 15px;
   color: #4a3481c7;
-  font-weight: 500;
 }
 
 .humidity {
-  padding-right: 48px;
+  padding-right: 42px;
 }
 
 .day-time {
-  padding-right: 48px;
+  padding-right: 42px;
 }
 
 h1 {

@@ -21,24 +21,24 @@ export default function WeatherIcon(props) {
       color: {
         moon: '#ffeea3',
       },
-      size: 95,
+      size: 100,
 
     },
     "02d": {
       icon: SkyconType.PARTLY_CLOUDY_DAY,
       animate: true,
       color: {
-        cloud: `#909090`,
+        light_cloud: `#909090`,
         sun: `#ffe272`,
       },
-      size: 95,
+      size: 100,
 
     },
     "02n": {
       icon: SkyconType.PARTLY_CLOUDY_NIGHT,
       animate: true,
       color: {
-        cloud: `#909090`,
+        light_cloud: `#909090`,
         moon: `#ffeea3`,
       },
       size: 95,
@@ -48,7 +48,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.CLOUDY,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
       },
       size: 95,
 
@@ -57,34 +57,34 @@ export default function WeatherIcon(props) {
       icon: SkyconType.CLOUDY,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
       },
       size: 95,
-
     },
+
     "04d": {
       icon: SkyconType.CLOUDY,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
       },
-      size: 95,
-
+      size: 100,
     },
+
     "04n": {
       icon: SkyconType.CLOUDY,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
       },
-      size: 95,
-
+      size: 100,
     },
+
     "09d": {
       icon: SkyconType.RAIN,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
         rain: `#6666ff`,
       },
       size: 95,
@@ -94,7 +94,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.RAIN,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
         rain: `#6666ff`,
       },
       size: 95,
@@ -108,7 +108,7 @@ export default function WeatherIcon(props) {
         sun: `#ffe272`,
         rain: `#6666ff`,
       },
-      size: 95,
+      size: 100,
 
     },
     "10n": {
@@ -119,14 +119,14 @@ export default function WeatherIcon(props) {
         moon: `#ffeea3`,
         rain:`#6666ff`,
       },
-      size: 95,
+      size: 100,
 
     },
     "11d": {
       icon: SkyconType.THUNDER,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
         thunder: `#6666ff`,
       },
       size: 95,
@@ -136,7 +136,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.THUNDER,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
         thunder: `#6666ff`,
       },
       size: 95,
@@ -146,7 +146,8 @@ export default function WeatherIcon(props) {
       icon: SkyconType.SNOW_SHOWERS_DAY,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
+        sun: `#ffe272`,
         snow: `white`,
       },
       size: 95,
@@ -156,7 +157,8 @@ export default function WeatherIcon(props) {
       icon: SkyconType.SNOW_SHOWERS_NIGHT,
       animate: true,
       color: {
-        cloud: '#909090',
+        light_cloud: '#909090',
+        moon: `#ffeea3`,
         snow: `white`,
       },
       size: 95,
@@ -166,7 +168,9 @@ export default function WeatherIcon(props) {
       icon: SkyconType.FOG,
       animate: true,
       color: {
-        fog: `grey`,
+        light_cloud: `#a0a0a0`,
+        fog: `#e0dfdf`,
+
       },
       size: 95,
 
@@ -175,7 +179,8 @@ export default function WeatherIcon(props) {
       icon: SkyconType.FOG,
       animate: true,
       color: {
-        fog: `grey`,
+        light_cloud: `#909090`,
+        fog: `#e0dfdf`,
       },
       size: 95,
 
