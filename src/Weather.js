@@ -45,7 +45,6 @@ export default function Weather(props) {
     return (
       <div className="Weather">
         <form onSubmit={handleSubmit}>
-          <div className="row">
             <div className="col-9 btn">
               <input type="search" placeholder="Enter a City name" className="form-control" autocomplete="off" onChange={handleCityValue} />
             </div>
@@ -59,7 +58,13 @@ export default function Weather(props) {
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
-          </div>
+            <div className="col-3">
+              <div className="form-check form-switch">
+                <label className="form-check-label" for="flexSwitchCheckDefault">°C</label>
+                <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                <label className="form-check-label2" for="flexSwitchCheckDefault">°F</label>
+              </div>
+            </div>
         </form>
         <WeatherData data = {weatherData} />
       </div>

@@ -32,8 +32,7 @@ export default function WeatherData(props) {
         <li>Wind: {props.data.wind} km/h</li>
       </ul>
       <div className="switch">
-        <input type="checkbox" ></input>
-
+        <input className="second-switch" type="checkbox" ></input>
       </div>
     </div>
   )

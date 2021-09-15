@@ -50,7 +50,7 @@ export default function WeatherIcon(props) {
       color: {
         light_cloud: '#909090',
       },
-      size: 95,
+      size: 90,
 
     },
     "03n": {
@@ -59,7 +59,7 @@ export default function WeatherIcon(props) {
       color: {
         light_cloud: '#909090',
       },
-      size: 95,
+      size: 90,
     },
 
     "04d": {
@@ -68,7 +68,7 @@ export default function WeatherIcon(props) {
       color: {
         light_cloud: '#909090',
       },
-      size: 100,
+      size: 90,
     },
 
     "04n": {
@@ -77,7 +77,7 @@ export default function WeatherIcon(props) {
       color: {
         light_cloud: '#909090',
       },
-      size: 100,
+      size: 90,
     },
 
     "09d": {
@@ -94,7 +94,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.RAIN,
       animate: true,
       color: {
-        light_cloud: '#909090',
+        cloud: '#909090',
         rain: `#6666ff`,
       },
       size: 95,

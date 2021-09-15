@@ -23,14 +23,13 @@
 
 form {
   display: block;
-  width: fit-content;
   margin: 0 auto;
   border: 20px;
 }
 .form-control {
   border-color: rgba(245, 245, 245);
   padding: 3px 10px 3px 10px;
-  background-color: #edecf0a4;
+  background-color: #fefeff;
   box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
 }
 .btn-primary {
@@ -46,16 +45,49 @@ form {
   color: rgb(245, 245, 245);
 }
 
-.btn {
-  padding: 0%;
+.col-9 {
+  position: relative;
+  left: -80px;
+  width: 60%;
 }
 
-.col-2,
-.btn btn-link {
-  padding-left: 25px;
+row {
+  display: block;
 }
-.btn-primary:hover {
-  background-color: #875df1e3;
+.col-1 {
+  width: 0%;
+  position: fixed;
+  left: 715px;
+  top: 48px;
+}
+
+.col-2 {
+  width: 0%;
+  position: fixed;
+  left: 755px;
+  top: 48px;
+}
+.col-3 {
+  position: fixed;
+  right: 190px;
+  top: 56px;
+}
+
+.form-check .form-check-label {
+  font-size: 20px;
+  left: -35px;
+  position: absolute;
+}
+.form-check .form-check-input {
+  font-size: 20px;
+  background-color: #875df162;
+  border-color: whitesmoke;
+}
+
+.form-check .form-check-label2 {
+  font-size: 20px;
+  position: absolute;
+  left: 35px;
 }
 
 .weather-icon canvas {
@@ -135,21 +167,21 @@ h2 {
   left: 46%;
 }
 
-input[type="checkbox"] {
+.second-switch {
   position: relative;
   width: 110px;
   height: 33px;
   -webkit-appearance: none;
-  background: rgba(245, 245, 245, 0.582);
+  background: #f5f5f5b0;
   outline: none;
   border-radius: 5px;
 }
 
-input[type="checkbox"]:hover {
+.second-switch:hover {
   cursor: pointer;
 }
 
-input[type="checkbox"]:before {
+.second-switch:before {
   content: "Hourly";
   font-weight: 500;
   color: whitesmoke;
@@ -161,13 +193,13 @@ input[type="checkbox"]:before {
   left: 3%;
   width: 55px;
   height: 25px;
-  background: #45a39e9d;
+  background: #44b8b2b6;
   border-radius: 5px;
   transform: scale(0.98, 0.96);
   transition: 0.5s;
 }
 
-input[type="checkbox"]:after {
+.second-switch:after {
   content: "Daily";
   font-weight: 500;
   color: #4a3481d5;
@@ -177,14 +209,14 @@ input[type="checkbox"]:after {
   transition: all 0.5s ease-out;
 }
 
-input:checked[type="checkbox"]:before {
+.second-switch:checked[type="checkbox"]:before {
   left: 50px;
   content: "Daily";
   text-align: center;
   transition: all 0.5s ease-out;
 }
 
-input:checked[type="checkbox"]:after {
+.second-switch:checked[type="checkbox"]:after {
   content: "Hourly";
   font-size: 14px;
   padding: 10px 30px 5px 5px;
