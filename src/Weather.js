@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
+import ToggleSwitch from "./ToggleSwitch";
 
 export default function Weather(props) {
 
@@ -40,7 +41,8 @@ export default function Weather(props) {
   function handleCityValue(event) {
     setCity(event.target.value);
   }
-  
+
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -58,13 +60,7 @@ export default function Weather(props) {
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
-            <div className="col-3">
-              <div className="form-check form-switch">
-                <label className="form-check-label" for="flexSwitchCheckDefault">°C</label>
-                <input className="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
-                <label className="form-check-label2" for="flexSwitchCheckDefault">°F</label>
-              </div>
-            </div>
+            <ToggleSwitch />
         </form>
         <WeatherData data = {weatherData} />
       </div>

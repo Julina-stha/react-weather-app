@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDayandTime from "./FormattedDayandTime";
+import WeatherTemp from "./WeatherTemp";
 import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 
@@ -9,7 +10,7 @@ export default function WeatherData(props) {
   return (
     <div className="weatherData">
       <h1>{props.data.city}, {props.data.country}</h1>
-      <h2>{Math.round(props.data.temperature)}°C</h2>
+      <WeatherTemp celsius={Math.round(props.data.temperature)} />
       <ul>
         <li className="sunrise">
           <img src="https://img.icons8.com/office/80/000000/sunrise--v1.png" alt="sunset" width="45" height="45" />
