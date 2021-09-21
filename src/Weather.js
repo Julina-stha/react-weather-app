@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
-import ToggleSwitch from "./ToggleSwitch";
+import TempButton from "./TempButton";
 
 export default function Weather(props) {
 
@@ -21,8 +21,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       dayandtime: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
-      sunrise: new Date(response.data.sys.sunrise * 1000),
-      sunset: new Date(response.data.sys.sunset * 1000),
+      sunrise: response.data.sys.sunrise,
+      sunset: response.data.sys.sunset,
     })
   }
 
@@ -52,7 +52,7 @@ export default function Weather(props) {
             </div>
             <div className="col-1">
               <button type="submit" className="btn btn-link">
-                <i class="fas fa-search"></i>
+                <i class="fas fa-search" id="icons"></i>
               </button>
             </div>
             <div className="col-2">
@@ -60,7 +60,7 @@ export default function Weather(props) {
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
-            <ToggleSwitch />
+            <TempButton />
         </form>
         <WeatherData data = {weatherData} />
       </div>
