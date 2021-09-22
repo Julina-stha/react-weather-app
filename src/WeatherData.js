@@ -1,5 +1,6 @@
 import React from "react";
 import FormattedDayandTime from "./FormattedDayandTime";
+import FormatDate from "./FormatDate";
 import WeatherTemp from "./WeatherTemp";
 import SunriseSunsetTime from "./SunriseSunsetTime";
 import WeatherIcon from "./WeatherIcon";
@@ -15,12 +16,19 @@ export default function WeatherData(props) {
       <SunriseSunsetTime riseTime={props.data.sunrise} setTime={props.data.sunset}/>
       <WeatherIcon code = {props.data.icon}/>
       <ul className="small-text">
-        <li className ="text-capitalize">{props.data.description} | 10/09/2021 </li>
+        <li className="text-capitalize">
+          {props.data.description} | <FormatDate date={props.data.dayandtime} />
+        </li>
       </ul>
       <ul className="more-weather-info">
-        <li className="humidity">Humidity: {Math.round(props.data.humidity)}%</li>
-        <li className="day-time"> <FormattedDayandTime dayandtime ={props.data.dayandtime} /></li>
-        <li>Wind: {props.data.wind} km/h</li>
+        <li className="humidity">
+          Humidity: {Math.round(props.data.humidity)}%
+        </li>
+        <li className="day-time">
+          <FormattedDayandTime dayandtime={props.data.dayandtime} /></li>
+        <li>
+          Wind: {props.data.wind} km/h
+        </li>
       </ul>
     <div className="switch">
       <div className="btn-group btn-group-mb-2">

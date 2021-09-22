@@ -21,8 +21,8 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       dayandtime: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
-      sunrise: response.data.sys.sunrise,
-      sunset: response.data.sys.sunset,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
     })
   }
 
