@@ -32,11 +32,23 @@ form {
   background-color: whitesmoke;
 }
 
-.fa,
-.fas {
+#icons {
   font-size: 25px;
-  margin-top: 10%;
-  color: whitesmoke;
+  margin-top: 0%;
+  color: #4a34819f;
+}
+
+#icons:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 20ms ease-in-out;
+  color: #4a3481c7;
+}
+
+#icons:focus {
+  transition: 100ms ease-in-out;
+  color: #4a3481c7;
 }
 
 .col-9 {
@@ -52,14 +64,14 @@ row {
   width: 0%;
   position: fixed;
   left: 705px;
-  top: 48px;
+  top: 45px;
 }
 
 .col-2 {
   width: 0%;
   position: fixed;
   left: 745px;
-  top: 48px;
+  top: 45px;
 }
 .col-3 {
   position: fixed;
@@ -97,6 +109,13 @@ row {
   transition: 100ms ease-in-out;
   color: #4a3481c7;
 }
+#cel:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 20ms ease-in-out;
+  color: #4a3481c7;
+}
 
 .break {
   font-size: 24px;
@@ -112,9 +131,12 @@ row {
   color: #4a3481c7;
 }
 
-.fas:hover {
+#fah:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 20ms ease-in-out;
   color: #4a3481c7;
-  transition: 100ms ease-in-out;
 }
 
 .weather-icon canvas {

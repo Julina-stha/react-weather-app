@@ -51,12 +51,12 @@ export default function Weather(props) {
               <input type="search" placeholder="Enter a City name" className="form-control" autocomplete="off" onChange={handleCityValue} />
             </div>
             <div className="col-1">
-              <button type="submit" className="btn btn-link">
-                <i class="fas fa-search" id="icons"></i>
+              <button type="submit" className="btn btn-link" id="icons">
+                <i class="fas fa-search" ></i>
               </button>
             </div>
             <div className="col-2">
-              <button type="submit" className="btn btn-link">
+              <button type="submit" className="btn btn-link" id="icons">
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
