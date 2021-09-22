@@ -18,7 +18,7 @@ export default function FormattedDayandTime(props) {
     <div>
       {day}
       <div>
-        Local Time: {hours}:{minutes}
+        <span className="more-weather-text">Local Time: </span>{hours}:{minutes}
       </div>
     </div>
   );

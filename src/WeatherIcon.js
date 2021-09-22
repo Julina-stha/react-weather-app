@@ -28,7 +28,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.PARTLY_CLOUDY_DAY,
       animate: true,
       color: {
-        light_cloud: `#999999`,
+        light_cloud: `#7a7a7ad7`,
         sun: `#ffd941`,
       },
       size: 90,

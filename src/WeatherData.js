@@ -26,14 +26,14 @@ export default function WeatherData(props) {
         </ul>
       </div>
       <ul className="more-weather-info">
-        <li className="humidity">
-          Humidity: {Math.round(props.data.humidity)}%
+        <li>
+          <span className="more-weather-text">Humidity: </span> {Math.round(props.data.humidity)}%
         </li>
-        <li className="day-time">
+        <li>
           <FormattedDayandTime dayandtime={props.data.dayandtime} />
         </li>
         <li>
-          Wind: {props.data.wind}km/h
+          <span className="more-weather-text">Wind: </span>{props.data.wind}km/h
         </li>
       </ul>
     <div className="switch">

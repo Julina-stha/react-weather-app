@@ -1,6 +1,8 @@
 .five-day-forecast {
   text-align: center;
   margin-top: 1px;
+  font-weight: 600;
+  color: #6e6e6e;
 }
 
 .five-day-icon canvas {
@@ -8,4 +10,9 @@
   width: 60px;
   display: block;
   margin: 0 auto;
+}
+
+.five-day-forecast-min {
+  color: #7a7a7abd;
+  margin-left: 6px;
 }
