@@ -36,12 +36,6 @@ export default function WeatherData(props) {
           <span className="more-weather-text">Wind: </span>{props.data.wind}km/h
         </li>
       </ul>
-    <div className="switch">
-      <div className="btn-group btn-group-mb-2">
-        <button type="button" className="btn btn btn-primary" id="hourly">Hourly</button>
-        <button type="button" className="btn btn btn-primary" id="daily">Daily</button>
-      </div>
-    </div>
     </div>
   )
 }

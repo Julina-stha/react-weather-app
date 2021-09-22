@@ -3,7 +3,7 @@ import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
-import FiveDayForecast from "./FiveDayForecast";
+import FiveHourForecast from "./FiveHourForecast";
 
 export default function Weather(props) {
 
@@ -14,6 +14,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       country: response.data.sys.country,
       temperature:response.data.main.temp,
@@ -63,8 +64,14 @@ export default function Weather(props) {
             </div>
             <TempButton />
         </form>
-        <WeatherData data = {weatherData} />
-        <FiveDayForecast />
+        <WeatherData data={weatherData} />
+        <div className="switch">
+          <div className="btn-group btn-group-mb-2">
+            <button type="button" className="btn btn btn-primary" id="hourly" >Hourly</button>
+            <button type="button" className="btn btn btn-primary" id="daily" >Daily</button>
+          </div>
+        </div>
+        <FiveHourForecast coordinates={weatherData.coordinates}/>
       </div>
     );
   } else {
