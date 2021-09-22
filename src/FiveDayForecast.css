@@ -1,0 +1,11 @@
+.five-day-forecast {
+  text-align: center;
+  margin-top: 1px;
+}
+
+.five-day-icon canvas {
+  text-align: center;
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+}

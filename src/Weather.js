@@ -3,6 +3,7 @@ import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
+import FiveDayForecast from "./FiveDayForecast";
 
 export default function Weather(props) {
 
@@ -63,6 +64,7 @@ export default function Weather(props) {
             <TempButton />
         </form>
         <WeatherData data = {weatherData} />
+        <FiveDayForecast />
       </div>
     );
   } else {

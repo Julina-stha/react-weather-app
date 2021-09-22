@@ -15,8 +15,11 @@ export default function FormattedDayandTime(props) {
   }
 
   return (
-    <span>
-      {day} | {hours}:{minutes}
-    </span>
+    <div>
+      {day}
+      <div>
+        Local Time: {hours}:{minutes}
+      </div>
+    </div>
   );
 }

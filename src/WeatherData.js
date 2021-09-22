@@ -14,20 +14,26 @@ export default function WeatherData(props) {
       <h1>{props.data.city}, {props.data.country}</h1>
       <WeatherTemp celsius={Math.round(props.data.temperature)} />
       <SunriseSunsetTime riseTime={props.data.sunrise} setTime={props.data.sunset}/>
-      <WeatherIcon code = {props.data.icon}/>
-      <ul className="small-text">
-        <li className="text-capitalize">
-          {props.data.description} | <FormatDate date={props.data.dayandtime} />
-        </li>
-      </ul>
+      <WeatherIcon code={props.data.icon} />
+      <div className="small-text">
+        <ul >
+          <li className="text-capitalize">
+            {props.data.description}
+          </li>
+          <li>
+          <FormatDate date={props.data.dayandtime} />
+          </li>
+        </ul>
+      </div>
       <ul className="more-weather-info">
         <li className="humidity">
           Humidity: {Math.round(props.data.humidity)}%
         </li>
         <li className="day-time">
-          <FormattedDayandTime dayandtime={props.data.dayandtime} /></li>
+          <FormattedDayandTime dayandtime={props.data.dayandtime} />
+        </li>
         <li>
-          Wind: {props.data.wind} km/h
+          Wind: {props.data.wind}km/h
         </li>
       </ul>
     <div className="switch">

@@ -140,35 +140,14 @@ row {
 }
 
 .weather-icon canvas {
+  display: block;
   margin-top: 1%;
+  margin-left: 40%;
 }
 
 hr {
   line-height: 0.5%;
   margin: 0.5rem 0;
-}
-
-.sunrise {
-  position: relative;
-  font-weight: 500;
-  left: 10px;
-  float: left;
-  font-size: 14px;
-  line-height: 0%;
-}
-.blue-text {
-  color: #6185c4;
-}
-.sunset {
-  font-weight: 500;
-  position: relative;
-  right: 15px;
-  float: right;
-  font-size: 14px;
-  line-height: 0%;
-}
-.red-text {
-  color: #c74647;
 }
 
 ul {
@@ -178,9 +157,11 @@ ul {
 }
 
 .small-text {
+  position: relative;
+  right: 50px;
+  text-align: center;
   margin-bottom: 2%;
   font-size: 14px;
-  line-height: 0px;
 }
 
 element.style {
@@ -188,18 +169,14 @@ element.style {
 }
 ul.more-weather-info,
 ul.more-weather-info li {
-  display: inline;
+  position: relative;
+  left: -6px;
+  bottom: 65px;
   font-size: 15px;
   font-weight: 500;
+  line-height: 2.5;
   color: white;
-}
-
-.humidity {
-  padding-right: 42px;
-}
-
-.day-time {
-  padding-right: 42px;
+  text-align: right;
 }
 
 h1 {
@@ -216,8 +193,9 @@ h2 {
 }
 
 .switch {
-  display: block;
-  margin-top: 28%;
+  position: absolute;
+  left: 618px;
+  bottom: 190px;
 }
 #hourly {
   background-color: #f8d058ab;

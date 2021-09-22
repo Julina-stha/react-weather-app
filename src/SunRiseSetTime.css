@@ -1,0 +1,19 @@
+.rise-set-time {
+  position: relative;
+  float: left;
+  left: 10px;
+  font-size: 14px;
+  line-height: 2%;
+  font-weight: 500;
+}
+
+.sunset {
+  margin-top: 20%;
+}
+.blue-text {
+  color: #6185c4;
+}
+
+.red-text {
+  color: #c74647;
+}
