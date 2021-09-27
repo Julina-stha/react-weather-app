@@ -3,10 +3,10 @@ import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
-import FiveHourForecast from "./FiveHourForecast";
+import FiveDayForecast from "./FiveDayForecast";
 
 export default function Weather(props) {
-
+  const [unit, setUnit] = useState(`metric`);
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
@@ -30,20 +30,37 @@ export default function Weather(props) {
 
   function searchCity() {
     const apikey = "ba753d969dccd2973e89444d00d45191";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${unit}`;
     axios.get(apiUrl).then(submitResult);
+  }
+
+  function onUnitChange(unit) {
+    setUnit(unit);
+    searchCity(unit);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchCity();
+    searchCity(unit);
     //searches for the city//
   }
 
   function handleCityValue(event) {
     setCity(event.target.value);
   }
+  
+  function handleCoordinates(position) {
+    const apiKey = "ba753d969dccd2973e89444d00d45191";
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+    axios.get(url).then(submitResult);
+  }
 
+  function handleLocate(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(handleCoordinates);
+  }
 
   if (weatherData.ready) {
     return (
@@ -58,20 +75,14 @@ export default function Weather(props) {
               </button>
             </div>
             <div className="col-2">
-              <button type="submit" className="btn btn-link" id="icons">
+              <button type="submit" className="btn btn-link" id="icons" onClick={handleLocate}>
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
-            <TempButton />
+            <TempButton  onUnitChange={onUnitChange}/>
         </form>
-        <WeatherData data={weatherData} />
-        <div className="switch">
-          <div className="btn-group btn-group-mb-2">
-            <button type="button" className="btn btn btn-primary" id="hourly" >Hourly</button>
-            <button type="button" className="btn btn btn-primary" id="daily" >Daily</button>
-          </div>
-        </div>
-        <FiveHourForecast coordinates={weatherData.coordinates}/>
+        <WeatherData data={weatherData} unit={unit}/>
+        <FiveDayForecast coordinates={weatherData.coordinates} unit={unit}/>
       </div>
     );
   } else {

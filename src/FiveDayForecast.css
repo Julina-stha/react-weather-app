@@ -1,18 +1,18 @@
-.five-hour-forecast {
+.five-day-forecast {
   text-align: center;
-  margin-top: 1px;
+  margin-top: -10px;
   font-weight: 600;
   color: #6e6e6e;
 }
 
-.five-hour-icon canvas {
+.five-day-icon canvas {
   text-align: center;
   width: 60px;
   display: block;
   margin: 0 auto;
 }
 
-.five-hour-forecast-min {
+.five-day-forecast-min {
   color: #7a7a7abd;
   margin-left: 6px;
 }

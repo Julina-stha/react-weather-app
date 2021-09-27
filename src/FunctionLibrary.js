@@ -1,6 +1,6 @@
 export function getTime(timestamp, timeZone) {
     let date = new Date(timestamp);
-    let hours = (date.getUTCHours() + timeZone + 24) / 24;
+    let hours = (date.getUTCHours() + timeZone + 24) % 24;
     if (hours < 10) {
         hours = `0${hours}`;
     }

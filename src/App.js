@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather defaultCity="Kathmandu"/>
+        <Weather defaultCity="Kathmandu" unit="metric"/>
         <Footer />
       </div>
     </div>

@@ -194,33 +194,3 @@ h2 {
   font-size: 57px;
   font-weight: lighter;
 }
-
-.switch {
-  position: absolute;
-  left: 618px;
-  bottom: 190px;
-}
-#hourly {
-  background-color: #7a7a7aa2;
-  color: white;
-  padding: 5px;
-}
-#hourly:focus {
-  transition: 100ms ease-in-out;
-  background-color: #f8d05891;
-}
-
-#daily {
-  margin-left: 3px;
-  background-color: #7a7a7aa2;
-  color: white;
-}
-#daily:focus {
-  transition: 100ms ease-in-out;
-  color: white;
-  background-color: #f8d05891;
-}
-
-.btn-primary:hover {
-  transition: 100ms ease-in-out;
-}
