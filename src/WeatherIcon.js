@@ -104,7 +104,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.SHOWERS_DAY,
       animate: true,
       color: {
-        cloud: 'white',
+        cloud: '#7a7a7ad7',
         sun: `#ffd941`,
         rain: `#6666ff`,
       },

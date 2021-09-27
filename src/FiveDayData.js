@@ -6,17 +6,17 @@ import "./FiveDayForecast.css";
 export default function FiveDayData(props) {
 
   function max() {
-    let maxTemp = Math.round(props.fiveDayData.max);
+    let maxTemp = Math.round(props.daydata.temp.max);
     return `${maxTemp}°`;
   }
   
   function min() {
-    let minTemp = Math.round(props.fiveDayData.min);
+    let minTemp = Math.round(props.daydata.temp.min);
     return `${minTemp}°`;
   }
 
   function day() {
-    let date = new Date(props.fiveDayData.dt * 1000);
+    let date = new Date(props.daydata.dt * 1000);
     let day = date.getDay();
 
     let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"]
@@ -26,12 +26,12 @@ export default function FiveDayData(props) {
 
   return (
     <div>
-        {day}
+        {day()}
         <div className="five-day-icon">
-          <WeatherIcon code={props.fiveDayData.weathe[0].icon} size={20} />
+          <WeatherIcon code={props.daydata.weather[0].icon} size={20} />
         </div>
-        <span className="five-day-forecast-max">{max}</span>
-        <span className="five-day-forecast-min">{min}</span>
+        <span className="five-day-forecast-max">{max()}</span>
+        <span className="five-day-forecast-min">{min()}</span>
       </div>
   )
 }

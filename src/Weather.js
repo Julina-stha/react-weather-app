@@ -23,13 +23,15 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       dayandtime: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
-      sunrise: new Date(response.data.sys.sunrise * 1000),
-      sunset: new Date(response.data.sys.sunset * 1000),
+      sunrise: response.data.sys.sunrise * 1000,
+      sunset: response.data.sys.sunset * 1000,
+      timezone: response.data.timzone / 3600,
+
     })
   }
 
   function searchCity() {
-    const apikey = "ba753d969dccd2973e89444d00d45191";
+    const apikey = "3cdeb2ae4d82e41c2c50a8a041cb1b0c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${unit}`;
     axios.get(apiUrl).then(submitResult);
   }
@@ -50,7 +52,7 @@ export default function Weather(props) {
   }
   
   function handleCoordinates(position) {
-    const apiKey = "ba753d969dccd2973e89444d00d45191";
+    const apiKey = "3cdeb2ae4d82e41c2c50a8a041cb1b0c";
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
