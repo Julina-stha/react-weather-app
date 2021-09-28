@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import FiveDayData from "./FiveDayData";
-import "./FiveDayForecast.css";
+import FourDayData from "./FourDayData";
+import "./FourDayForecast.css";
 
 
-export default function FiveDayForecast(props) {
+export default function FourDayForecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
@@ -24,13 +24,13 @@ export default function FiveDayForecast(props) {
 
   if (loaded) {
     return (
-      <div className="five-day-forecast">
+      <div className="four-day-forecast">
         <div className="row">
             {forecast.daily.map(function (dailyForecast, index) {
               if (index < 4) {
                 return (
                   <div className="col" key={index}>
-                    <FiveDayData daydata={dailyForecast} />
+                    <FourDayData daydata={dailyForecast} />
                   </div>
                 )
               } else {
@@ -43,7 +43,7 @@ export default function FiveDayForecast(props) {
   } else {
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiKey = "3cdeb2ae4d82e41c2c50a8a041cb1b0c";
+    let apiKey = "ae004f22818d2b0da8c77b46a6027d96";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=${props.unit}`;
   
     axios.get(apiUrl).then(handleResponse);

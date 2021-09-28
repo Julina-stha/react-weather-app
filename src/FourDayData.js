@@ -1,9 +1,9 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import "./FiveDayForecast.css";
+import "./FourDayForecast.css";
 
 
-export default function FiveDayData(props) {
+export default function FourDayData(props) {
 
   function max() {
     let maxTemp = Math.round(props.daydata.temp.max);
@@ -27,11 +27,11 @@ export default function FiveDayData(props) {
   return (
     <div>
         {day()}
-        <div className="five-day-icon">
+        <div className="four-day-icon">
           <WeatherIcon code={props.daydata.weather[0].icon} size={20} />
         </div>
-        <span className="five-day-forecast-max">{max()}</span>
-        <span className="five-day-forecast-min">{min()}</span>
+        <span className="four-day-forecast-max">{max()}</span>
+        <span className="four-day-forecast-min">{min()}</span>
       </div>
   )
 }
