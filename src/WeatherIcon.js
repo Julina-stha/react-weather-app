@@ -168,8 +168,8 @@ export default function WeatherIcon(props) {
       icon: SkyconType.FOG,
       animate: true,
       color: {
-        light_cloud: `white`,
-        fog: `#e0dfdf`,
+        light_cloud: `#7a7a7ad7`,
+        fog: `#7a7a7ad9`,
       },
       size: 95,
 
@@ -178,8 +178,8 @@ export default function WeatherIcon(props) {
       icon: SkyconType.FOG,
       animate: true,
       color: {
-        light_cloud: `white`,
-        fog: `#e0dfdf`,
+        light_cloud: `#7a7a7ad7`,
+        fog: `#7a7a7ad9`,
       },
       size: 95,
     },
