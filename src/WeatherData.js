@@ -3,7 +3,6 @@ import FormattedDayandTime from "./FormattedDayandTime";
 import FormatDate from "./FormatDate";
 import SunriseSunsetTime from "./SunriseSunsetTime";
 import WeatherIcon from "./WeatherIcon";
-import FormatTemp from "./FormatTemp";
 import "./Weather.css";
 
 
@@ -13,7 +12,7 @@ export default function WeatherData(props) {
   return (
     <div className="weatherData">
       <h1>{props.data.city}, {props.data.country}</h1>
-      <h2>{Math.round(props.data.temperature)}°<FormatTemp /></h2>
+      <h2>{Math.round(props.data.temperature)}°</h2>
       <SunriseSunsetTime riseTime={props.data.sunrise} setTime={props.data.sunset} timezone={props.data.timezone}/>
       <WeatherIcon code={props.data.icon} />
       <div className="small-text">

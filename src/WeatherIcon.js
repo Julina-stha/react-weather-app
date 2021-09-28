@@ -84,7 +84,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.RAIN,
       animate: true,
       color: {
-        light_cloud: '#7a7a7ad7',
+        cloud: '#7a7a7ad7',
         rain: `#6666ff`,
       },
       size: 95,
@@ -115,7 +115,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.SHOWERS_NIGHT,
       animate: true,
       color: {
-        cloud: 'white',
+        cloud: '#7a7a7ad7',
         moon: `#ffe675`,
         rain:`#6666ff`,
       },

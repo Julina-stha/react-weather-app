@@ -101,7 +101,7 @@ row {
 }
 #cel {
   background-color: transparent;
-  color: #6e6e6ec2;
+  color: #666666;
   font-size: 30px;
 }
 
@@ -128,7 +128,7 @@ row {
 
 #fah:focus {
   transition: 100ms ease-in-out;
-  color: #666666;
+  color: whitesmoke;
 }
 
 #fah:hover {
@@ -174,7 +174,7 @@ ul.more-weather-info li {
   bottom: 68px;
   font-size: 15px;
   font-weight: 500;
-  line-height: 3.4;
+  line-height: 3.5;
   color: #f7f7f7e8;
   text-align: right;
 }

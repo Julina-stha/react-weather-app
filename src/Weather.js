@@ -3,7 +3,7 @@ import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
-import FiveDayForecast from "./FiveDayForecast";
+import FourDayForecast from "./FourDayForecast";
 
 export default function Weather(props) {
   const [unit, setUnit] = useState(`metric`);
@@ -25,13 +25,13 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       sunrise: response.data.sys.sunrise * 1000,
       sunset: response.data.sys.sunset * 1000,
-      timezone:Math.round(response.data.timezone / 3600) ,
+      timezone: Math.round(response.data.timezone / 3600),
 
     })
   }
 
   function searchCity() {
-    const apikey = "3cdeb2ae4d82e41c2c50a8a041cb1b0c";
+    const apikey = "ae004f22818d2b0da8c77b46a6027d96";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${unit}`;
     axios.get(apiUrl).then(submitResult);
   }
@@ -52,7 +52,7 @@ export default function Weather(props) {
   }
   
   function handleCoordinates(position) {
-    const apiKey = "3cdeb2ae4d82e41c2c50a8a041cb1b0c";
+    const apiKey = "ae004f22818d2b0da8c77b46a6027d96";
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
@@ -84,12 +84,14 @@ export default function Weather(props) {
             <TempButton  onUnitChange={onUnitChange}/>
         </form>
         <WeatherData data={weatherData} unit={unit}/>
-        <FiveDayForecast coordinates={weatherData.coordinates} unit={unit}/>
+        <FourDayForecast coordinates={weatherData.coordinates} unit={unit}/>
       </div>
     );
   } else {
     searchCity();
-    return ("Loading...");
+    return (<div>
+      <img src="https://img.icons8.com/external-becris-lineal-color-becris/64/000000/external-loading-data-visualization-becris-lineal-color-becris.png" alt="Please wait :)"/>
+    </div>);
   }
 
  
