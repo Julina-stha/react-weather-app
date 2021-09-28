@@ -171,17 +171,21 @@ ul.more-weather-info,
 ul.more-weather-info li {
   position: relative;
   left: -6px;
-  bottom: 65px;
+  bottom: 68px;
   font-size: 15px;
   font-weight: 500;
-  line-height: 2.5;
-  color: white;
+  line-height: 3.4;
+  color: #f7f7f7e8;
   text-align: right;
 }
 
 .more-weather-text {
   color: #6e6e6e;
 }
+.time {
+  color: #f7f7f7e8;
+}
+
 h1 {
   font-size: 38px;
   font-weight: 500;

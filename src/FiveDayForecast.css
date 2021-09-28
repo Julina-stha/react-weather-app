@@ -1,6 +1,6 @@
 .five-day-forecast {
   text-align: center;
-  margin-top: -10px;
+  margin-top: -23px;
   font-weight: 600;
   color: #6e6e6e;
 }
@@ -15,33 +15,4 @@
 .five-day-forecast-min {
   color: #7a7a7abd;
   margin-left: 6px;
-}
-.switch {
-  position: absolute;
-  left: 618px;
-  bottom: 190px;
-}
-#hourly {
-  background-color: #7a7a7aa2;
-  color: white;
-  padding: 5px;
-}
-#hourly:focus {
-  transition: 100ms ease-in-out;
-  background-color: #f8d05891;
-}
-
-#daily {
-  margin-left: 3px;
-  background-color: #7a7a7aa2;
-  color: white;
-}
-#daily:focus {
-  transition: 100ms ease-in-out;
-  color: white;
-  background-color: #f8d05891;
-}
-
-.btn-primary:hover {
-  transition: 100ms ease-in-out;
 }

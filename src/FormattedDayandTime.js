@@ -16,10 +16,7 @@ export default function FormattedDayandTime(props) {
 
   return (
     <div>
-      {day}
-      <div>
-        <span className="more-weather-text">Local Time: </span>{hours}:{minutes}
-      </div>
+      <span className="more-weather-text"><i class="fas fa-clock"></i> {day} <span className="time">{hours}:{minutes}</span></span>
     </div>
   );
 }

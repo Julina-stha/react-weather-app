@@ -25,12 +25,6 @@ export default function FiveDayForecast(props) {
   if (loaded) {
     return (
       <div className="five-day-forecast">
-        <div className="switch">
-          <div className="btn-group btn-group-mb-2">
-            <button type="button" className="btn btn btn-primary" id="hourly" >Hourly</button>
-            <button type="button" className="btn btn btn-primary" id="daily" >Daily</button>
-          </div>
-        </div>
         <div className="row">
             {forecast.daily.map(function (dailyForecast, index) {
               if (index < 4) {
@@ -57,4 +51,3 @@ export default function FiveDayForecast(props) {
   }
 
 }
- 
