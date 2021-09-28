@@ -31,7 +31,7 @@ export default function WeatherData(props) {
           <span className="more-weather-text"><i class="fas fa-tint" aria-hidden="true"></i> Humidity: </span> {Math.round(props.data.humidity)}%
         </li>
         <li>
-          <FormattedDayandTime dayandtime={props.data.dayandtime} />
+          <FormattedDayandTime dayandtime={props.data.dayandtime} timezone={props.data.timezone}/>
         </li>
         <li>
           <span className="more-weather-text"><i class="fas fa-wind"></i> Wind: </span>{props.data.wind}km/h

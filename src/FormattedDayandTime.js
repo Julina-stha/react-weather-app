@@ -1,7 +1,10 @@
 import React from "react";
+import { getTime } from "./FunctionLibrary";
+
 
 export default function FormattedDayandTime(props) {
-  console.log(props.dayandtime);
+  let LocalTime = getTime(props.dayandtime, props.timezone);
+
   let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   let day = days[props.dayandtime.getDay()];
   let hours = props.dayandtime.getHours();
@@ -16,7 +19,7 @@ export default function FormattedDayandTime(props) {
 
   return (
     <div>
-      <span className="more-weather-text"><i class="fas fa-clock"></i> {day} <span className="time">{hours}:{minutes}</span></span>
+      <span className="more-weather-text"><i class="fas fa-clock"></i> {day} <span className="time">{LocalTime}</span></span>
     </div>
   );
 }

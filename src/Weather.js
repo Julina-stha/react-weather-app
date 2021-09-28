@@ -25,7 +25,7 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       sunrise: response.data.sys.sunrise * 1000,
       sunset: response.data.sys.sunset * 1000,
-      timezone: response.data.timzone / 3600,
+      timezone:Math.round(response.data.timezone / 3600) ,
 
     })
   }
