@@ -101,7 +101,7 @@ row {
 }
 #cel {
   background-color: transparent;
-  color: #666666;
+  color: #6e6e6ec2;
   font-size: 30px;
 }
 
@@ -128,7 +128,7 @@ row {
 
 #fah:focus {
   transition: 100ms ease-in-out;
-  color: whitesmoke;
+  color: #666666;
 }
 
 #fah:hover {
