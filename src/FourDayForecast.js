@@ -9,7 +9,6 @@ export default function FourDayForecast(props) {
   const [forecast, setForecast] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data);
     setForecast({
       hourly: response.data.hourly,
       daily: response.data.daily,
@@ -44,7 +43,7 @@ export default function FourDayForecast(props) {
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
     let apiKey = "ae004f22818d2b0da8c77b46a6027d96";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=${props.unit}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude={part}&appid=${apiKey}&units=metric`;
   
     axios.get(apiUrl).then(handleResponse);
     return null;
