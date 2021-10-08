@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import WeatherData from "./WeatherData";
+import FourDayForecast from "./FourDayForecast";
+import FourDayForecastFahrenheit from "./FourDayForecastFahrenheit";
 import "./Weather.css";
 
 export default function TempButton(props) {
@@ -27,6 +29,7 @@ export default function TempButton(props) {
         <h1>{props.data.city}, {props.data.country}</h1>
         <h2>{Math.round(props.data.temperature)}°C</h2>
         <WeatherData data={props.data} />
+        <FourDayForecast coordinates={props.coordinates} />
       </div>
     )
   } else {
@@ -43,6 +46,7 @@ export default function TempButton(props) {
         <h1>{props.data.city}, {props.data.country}</h1>
         <h2>{fahrenheit}°F</h2>
         <WeatherData data={props.data} />
+        <FourDayForecastFahrenheit coordinates={props.coordinates} />
       </div>
     );
   }

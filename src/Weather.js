@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
-import FourDayForecast from "./FourDayForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function submitResult(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -75,8 +75,7 @@ export default function Weather(props) {
               </button>
             </div>
         </form>
-        <TempButton  data={weatherData} />
-        <FourDayForecast coordinates={weatherData.coordinates} />
+        <TempButton  data={weatherData} coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
