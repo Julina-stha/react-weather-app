@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import WeatherData from "./WeatherData";
 import axios from "axios";
 import "./Weather.css";
 import TempButton from "./TempButton";
 import FourDayForecast from "./FourDayForecast";
 
 export default function Weather(props) {
-  const [unit, setUnit] = useState(`metric`);
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function submitResult(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -32,18 +29,14 @@ export default function Weather(props) {
 
   function searchCity() {
     const apikey = "ae004f22818d2b0da8c77b46a6027d96";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=${unit}`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`;
     axios.get(apiUrl).then(submitResult);
   }
 
-  function onUnitChange(unit) {
-    setUnit(unit);
-    searchCity(unit);
-  }
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchCity(unit);
+    searchCity();
     //searches for the city//
   }
 
@@ -55,7 +48,7 @@ export default function Weather(props) {
     const apiKey = "ae004f22818d2b0da8c77b46a6027d96";
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
     axios.get(url).then(submitResult);
   }
 
@@ -81,10 +74,9 @@ export default function Weather(props) {
                 <i class="fas fa-map-marker-alt"></i>
               </button>
             </div>
-            <TempButton  onUnitChange={onUnitChange}/>
         </form>
-        <WeatherData data={weatherData} unit={unit}/>
-        <FourDayForecast coordinates={weatherData.coordinates} unit={unit}/>
+        <TempButton  data={weatherData} />
+        <FourDayForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
