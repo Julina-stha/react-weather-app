@@ -1,7 +1,12 @@
 .container {
   display: block;
   margin: 0 auto;
-  max-width: 35%;
-  margin-top: 2.5%;
   text-align: center;
+  padding: 5rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 5rem 20rem;
+  }
 }
