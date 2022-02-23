@@ -20,7 +20,7 @@ export default function TempButton(props) {
   if (unit === "metric") {
     return (
       <div>
-        <div className="col-3">
+        <div className="temp-button">
           <div className="btn-group btn-group-mb-2">
             <button type="button" className="btn btn btn-primary" id="cel" onClick={convertToCelsius}>°C</button><span className="break">|</span>
             <button type="button" className="btn btn btn-primary" id="fah"  onClick={convertToFahrenheit} >°F</button>
@@ -37,7 +37,7 @@ export default function TempButton(props) {
     let fahrenheit = Math.round((celsius * 1.8) + 32);
     return (
       <div>
-        <div className="col-3">
+        <div className="temp-button">
           <div className="btn-group btn-group-mb-2">
             <button type="button" className="btn btn btn-primary" id="cel" onClick={convertToCelsius}>°C</button><span className="break">|</span>
             <button type="button" className="btn btn btn-primary" id="fah" onClick={convertToFahrenheit} >°F</button>
