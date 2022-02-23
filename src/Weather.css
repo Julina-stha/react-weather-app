@@ -21,11 +21,12 @@
 .form-control {
   width: 50%;
   border-color: rgba(245, 245, 245);
+  padding: 0.2rem 0.2rem;
 }
 
 .form-buttons {
   margin-left: 27%;
-  margin-top: -13%;
+  margin-top: -12%;
 }
 
 #search-button,
