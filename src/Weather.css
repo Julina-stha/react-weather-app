@@ -1,4 +1,4 @@
-.Weather {
+.weather {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: linear-gradient(
@@ -9,36 +9,36 @@
     ),
     url(https://www.clipartkey.com/mpngs/m/29-291798_mountain-range-euclidean-vector-blue-ridge-mountains-outline.png);
   background-repeat: no-repeat;
-  background-position-x: 40%;
-  background-position-y: 70%;
-  text-align: center;
+  background-position-x: center;
+  background-position-y: 77%;
+  background-size: contain;
   padding: 1rem;
-  transition: 0.8s;
   color: rgb(255, 250, 250);
-  box-shadow: 2px 4px 4px rgb(0 0 0 / 25%);
+  box-shadow: 2px 4px 4px rgba(87, 78, 78, 0.25);
   border-radius: 12px;
 }
 
-.form-control {
-  border-color: rgba(245, 245, 245);
-  padding: 3px 10px 3px 10px;
+form {
+  display: inline-flex;
+  margin-left: -10%;
 }
 
-.form-buttons {
-  margin-top: -22%;
+.form-control {
+  width: 58%;
+  border-color: rgba(245, 245, 245);
 }
 
 #search-button,
 #locate-button {
   font-size: 25px;
-  margin-top: 0;
   color: hsla(0, 0%, 43.1%, 0.7607843137254902);
+  padding: 0em 0.3em 0em 0.3em;
 }
 
 .btn btn-link:hover {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transition: 20ms ease-in-out;
   color: #666666;
 }
@@ -48,16 +48,16 @@
   color: #666666;
 }
 
-.type-form {
-  width: 55%;
-  color: #6e6e6ec2;
+.temp-button {
+  display: inline-flex;
+  float: right;
+  margin-top: -14%;
 }
 
-.temp-button {
-  position: fixed;
-  right: 580px;
-  top: 52px;
-  width: 0%;
+.btn-group,
+.btn-group-vertical {
+  position: none;
+  display: block;
 }
 
 .btn-primary {
@@ -79,7 +79,8 @@
   box-shadow: none !important;
   outline: 0;
 }
-#cel {
+#cel,
+#fah {
   background-color: transparent;
   color: #6e6e6ec2;
   font-size: 30px;
@@ -90,20 +91,15 @@
   color: #666666;
 }
 #cel:hover {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transition: 20ms ease-in-out;
   color: #666666;
 }
 
 .break {
   font-size: 24px;
-}
-#fah {
-  background-color: transparent;
-  color: #6e6e6ec2;
-  font-size: 30px;
 }
 
 #fah:focus {
@@ -112,17 +108,31 @@
 }
 
 #fah:hover {
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
   transition: 20ms ease-in-out;
   color: #666666;
 }
 
+h1 {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 5%;
+}
+
+h2 {
+  line-height: 60%;
+  font-size: 50px;
+  font-weight: lighter;
+}
+
 .weather-icon canvas {
+  width: 75px;
   display: block;
   margin-top: 1%;
-  margin-left: 40%;
+  margin-left: 37%;
 }
 
 hr {
@@ -137,24 +147,31 @@ ul {
 }
 
 .small-text {
-  position: relative;
-  right: 50px;
+  display: inline-block;
+  margin-right: 33%;
   text-align: center;
-  margin-bottom: 2%;
   font-size: 14px;
+}
+
+.text-capitalize {
+  word-wrap: break-word;
+  display: block;
+  margin: 0 auto;
+  width: 70%;
 }
 
 element.style {
   padding-right: 0%;
 }
-ul.more-weather-info,
-ul.more-weather-info li {
-  position: relative;
-  left: -6px;
-  bottom: 68px;
-  font-size: 15px;
+
+ul.more-weather-info {
+  display: inline-flex;
+  flex-direction: column;
+  float: right;
+  margin-top: -41%;
+  line-height: 4;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 3.5;
   color: #f7f7f7e8;
   text-align: right;
 }
@@ -164,17 +181,4 @@ ul.more-weather-info li {
 }
 .time {
   color: #f7f7f7e8;
-}
-
-h1 {
-  font-size: 38px;
-  font-weight: 500;
-  top: 80px;
-  margin-top: 1%;
-}
-
-h2 {
-  line-height: 60%;
-  font-size: 57px;
-  font-weight: lighter;
 }

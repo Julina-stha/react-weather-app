@@ -59,14 +59,12 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather">
+      <div className="weather">
         <form onSubmit={handleSubmit}>
-          <div className="type-form">
-            <input type="search" placeholder="Enter a City name" className="form-control" autocomplete="off" onChange={handleCityValue} />
-            <div className="form-buttons">
-              <button type="submit" className="btn btn-link" id="search-button"><i class="fas fa-search" ></i></button>
-              <button type="submit" className="btn btn-link" id="locate-button" onClick={handleLocate}><i class="fas fa-map-marker-alt"></i></button>
-            </div>
+          <input type="search" placeholder="Enter a City name" className="form-control" autocomplete="off" onChange={handleCityValue} />
+          <div className="form-buttons">
+            <button type="submit" className="btn btn-link" id="search-button"><i class="fas fa-search" ></i></button>
+            <button type="submit" className="btn btn-link" id="locate-button" onClick={handleLocate}><i class="fas fa-map-marker-alt"></i></button>
           </div>
         </form>
         <TempButton  data={weatherData} coordinates={weatherData.coordinates} />

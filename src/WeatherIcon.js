@@ -125,7 +125,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.THUNDER,
       animate: true,
       color: {
-        dark_cloud: '#7a7a7ad7',
+        cloud: '#7a7a7ad7',
         thunder: `#6666ff`,
       },
       size: 95,
@@ -135,7 +135,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.THUNDER,
       animate: true,
       color: {
-        light_cloud: '#7a7a7ad7',
+        cloud: '#7a7a7ad7',
         thunder: `#6666ff`,
       },
       size: 95,
@@ -145,7 +145,7 @@ export default function WeatherIcon(props) {
       icon: SkyconType.SNOW_SHOWERS_DAY,
       animate: true,
       color: {
-        light_cloud: '#7a7a7ad7',
+        cloud: '#7a7a7ad7',
         sun: `#ffd941`,
         snow: `white`,
       },

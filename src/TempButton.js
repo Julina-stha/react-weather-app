@@ -21,15 +21,17 @@ export default function TempButton(props) {
     return (
       <div>
         <div className="temp-button">
-          <div className="btn-group btn-group-mb-2">
+          <div className="btn-group btn-group-mb-2" id="tempButtonID">
             <button type="button" className="btn btn btn-primary" id="cel" onClick={convertToCelsius}>°C</button><span className="break">|</span>
             <button type="button" className="btn btn btn-primary" id="fah"  onClick={convertToFahrenheit} >°F</button>
           </div>
         </div>
-        <h1>{props.data.city}, {props.data.country}</h1>
-        <h2>{Math.round(props.data.temperature)}°C</h2>
-        <WeatherData data={props.data} />
-        <FourDayForecast coordinates={props.coordinates} />
+        <div className="weatherInfo">
+          <h1>{props.data.city}, {props.data.country}</h1>
+          <h2>{Math.round(props.data.temperature)}°C</h2>
+          <WeatherData data={props.data} />
+          <FourDayForecast coordinates={props.coordinates} />
+        </div>
       </div>
     )
   } else {
@@ -38,15 +40,17 @@ export default function TempButton(props) {
     return (
       <div>
         <div className="temp-button">
-          <div className="btn-group btn-group-mb-2">
+          <div className="btn-group btn-group-mb-2" id="tempButtonID">
             <button type="button" className="btn btn btn-primary" id="cel" onClick={convertToCelsius}>°C</button><span className="break">|</span>
             <button type="button" className="btn btn btn-primary" id="fah" onClick={convertToFahrenheit} >°F</button>
           </div>
         </div>
-        <h1>{props.data.city}, {props.data.country}</h1>
-        <h2>{fahrenheit}°F</h2>
-        <WeatherData data={props.data} />
-        <FourDayForecastFahrenheit coordinates={props.coordinates} />
+        <div className="weatherInfo">
+          <h1>{props.data.city}, {props.data.country}</h1>
+          <h2>{fahrenheit}°F</h2>
+          <WeatherData data={props.data} />
+          <FourDayForecastFahrenheit coordinates={props.coordinates} />
+        </div>
       </div>
     );
   }
